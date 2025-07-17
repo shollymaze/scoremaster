@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ScoreMaster Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>⚽ ScoreMaster</h1>
+
+  <label for="leagueSelector">League:</label>
+  <select id="leagueSelector" onchange="filterByLeague()">
+    <option value="All">All Leagues</option>
+  </select>
+
+  <br><br>
+
+  <label for="fixtureSelector">Fixture:</label>
+  <select id="fixtureSelector" onchange="onFixtureSelect()">
+    <option disabled selected>Select a fixture...</option>
+  </select>
+
+  <div id="output"></div>
+  <canvas id="scoreChart" width="600" height="300"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
